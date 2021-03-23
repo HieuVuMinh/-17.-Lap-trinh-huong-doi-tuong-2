@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="power"></p>
+<div id="Div"></div><br>
+<button type="button" onclick="Get()">Get Battery</button>
+<button type="button" onclick="Set()">Set Battery</button>
+<button type="button" onclick="charge()">Charge</button>
+<button type="button" onclick="turnOnTheLight()">Turn On The Light</button>
+
+<script>
+    class Battery{
+        energy;
+        constructor(energy) {
+            this.energy = energy;
+        }
+        getEnergy(){
+            return this.energy;
+        }
+        setEnergy(energy){
+            this.energy = energy;
+        }
+        decreaseEnergy(){
+            if(this.energy > 0){
+                this.energy--;
+            }
+        }
+    }
+
+    class FlashLamp{
+        battery;
+        constructor(battery) {
+            this.battery = battery;
+            this.picture1 = "<img src='032-Landscape03.png' height='320' width='640'/>";
+            this.picture2 = "<img src='031-Landscape02.png' height='320' width='640'/>";
+        }
+        getBattery(){
+            return this.battery.getEnergy();
+        }
+        setBattery(){
+            this.battery = battery;
+        }
+        turnOn(){
+            this.status = true;
+        }
+        turnOff(){
+            this.status = false;
+        }
+        light(){
+            if (this.status){
+                this.picture1 = this.picture2;
+                return this.picture1;
+            } else {
+                this.picture2 = this.picture1;
+                return this.picture2;
+            }
+        }
+    }
+
+    let power = new Battery(100);
+    let lamp = new FlashLamp(100);
+    // Lấy ra giá trị của Battery
+    function Get() {
+        var pic = "<img src='031-Landscape02.png' height='320' width='640'/>"
+        document.getElementById("power").innerHTML = "Power: " + power.getEnergy() + "%"
+        document.getElementById("Div").innerHTML = pic;
+    }
+    // Đặt lại giá trị Battery
+    function Set() {
+        var setUp = prompt("Enter the number u want to change")
+        power.setEnergy(setUp);
+        document.getElementById("power").innerHTML = "Power: " + power.getEnergy() + "%"
+    }
+    // Sạc đèn
+    function charge() {
+
+    }
+    // Bật đèn
+    function turnOnTheLight() {
+        document.getElementById("Div").innerHTML = lamp.turnOn();
+    }
+</script>
+</body>
+</html>
