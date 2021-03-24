@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<div>
+    <canvas id="myCanvas" width="1520px" height="700" style="border: solid 1px #d3d3d3"></canvas>
+</div>
+<script>
+    // Background
+    class bg {
+        sX;
+        sY;
+        sW;
+        sH;
+        cX;
+        cY;
+        cW;
+        cH;
+
+        constructor(sX, sY, sW, sH, cX, cY, cW, cH) {
+            this.sX = sX;
+            this.sY = sY;
+            this.sW = sW;
+            this.sH = sH;
+            this.cX = cX;
+            this.cY = cY;
+            this.cW = cW;
+            this.cH = cH;
+        }
+
+        draw() {
+            let image = new Image(128, 96);
+            image.src = "109-Ad-Shadow01.png"
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 100, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 200, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 400, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 600, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 800, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1000, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1200, this.cY, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1400, this.cY, this.cW, this.cH)
+
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 100, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 200, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 400, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 600, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 800, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1000, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1200, this.cY + 200, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1400, this.cY + 200, this.cW, this.cH)
+
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 100, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 200, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 400, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 600, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 800, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1000, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1200, this.cY + 400, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1400, this.cY + 400, this.cW, this.cH)
+
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 100, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 200, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 400, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 600, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 800, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1000, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1200, this.cY + 600, this.cW, this.cH)
+            ctx.drawImage(image, this.sX, this.sY, this.sW, this.sH, this.cX + 1400, this.cY + 600, this.cW, this.cH)
+        }
+    }
+
+    // lớp Character
+    class Character {
+        image;
+        sX;
+        sY;
+        sW;
+        sH;
+        cX;
+        cY;
+        cW;
+        cH;
+
+        constructor(sX, sY, sW, sH, cX, cY, cW, cH) {
+            this.sX = sX;
+            this.sY = sY;
+            this.sW = sW;
+            this.sH = sH;
+            this.cX = cX;
+            this.cY = cY;
+            this.cW = cW;
+            this.cH = cH;
+            this.speed = 10;
+        }
+
+        drawCharacter(src) {
+            this.image = new Image(48, 46);
+            this.image.src = src
+            ctx.drawImage(this.image, this.sX, this.sY, this.sW, this.sH, this.cX, this.cY, this.cW, this.cH)
+        }
+
+        moveRight() {
+            this.cX += this.speed;
+        }
+
+        moveLeft() {
+            this.cX -= this.speed;
+        }
+
+        moveUp() {
+            this.cY -= this.speed;
+        }
+
+        moveDown() {
+            this.cY += this.speed;
+        }
+    }
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    let Draw = new bg(0, 0, 96, 128, 0, 0, 200, 200)
+    Draw.draw();
+    let DrawCharacter = new Character(0, 0, 48, 64, 0, 0, 48, 64,)
+    DrawCharacter.drawCharacter("418-Monster21.png");
+    // let DrawCharacterRight = new Character(0, 128, 48, 64, 0, 0, 48, 64)
+    // let DrawCharacterLeft = new Character(0, 64, 48, 64, 0, 0, 48, 64)
+    // let DrawCharacterUp = new Character(0, 192, 48, 64, 0, 0, 48, 64)
+    // let DrawCharacterDown = new Character(0, 0, 48, 64, 0, 0, 48, 64)
+
+    // Di chuyển
+    // Phải
+    function moveRight() {
+        DrawCharacter.moveRight();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        Draw.draw();
+        DrawCharacter.drawCharacter("418-Monster21.png");
+    }
+
+    // Trái
+    function moveLeft() {
+        DrawCharacter.moveLeft();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        Draw.draw();
+        DrawCharacter.drawCharacter("418-Monster21.png")
+    }
+
+    // Lên
+    function moveUp() {
+        DrawCharacter.moveUp();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        Draw.draw();
+        DrawCharacter.drawCharacter("418-Monster21.png")
+    }
+
+    // Xuống
+    function moveDown() {
+        DrawCharacter.moveDown();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        Draw.draw();
+        DrawCharacter.drawCharacter("418-Monster21.png");
+    }
+
+    // function nhận bàn phím
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                moveLeft();
+                break;
+            case 39:
+                moveRight();
+                break;
+            case 38:
+                moveUp();
+                break;
+            case 40:
+                moveDown();
+                break;
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+
+</script>
+</body>
+</html>

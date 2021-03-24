@@ -69,18 +69,19 @@
     }
 
     let power = new Battery(100);
-    let lamp = new FlashLamp(100);
+    let lamp = new FlashLamp(power);
+    alert()
     // Lấy ra giá trị của Battery
     function Get() {
         // var pic = "<img src='031-Landscape02.png' height='320' width='640'/>"
-        document.getElementById("power").innerHTML = "Power: " + power.getEnergy() + "%"
+        document.getElementById("power").innerHTML = "Power: " + lamp.getBattery() + "%"
         // document.getElementById("Div").innerHTML = pic;
     }
     // Đặt lại giá trị Battery
     function Set() {
         var setUp = prompt("Enter the number u want to change")
         power.setEnergy(setUp);
-        document.getElementById("power").innerHTML = "Power: " + power.getEnergy() + "%"
+        document.getElementById("power").innerHTML = "Power: " + lamp.getBattery() + "%"
     }
     // Sạc đèn
     function charge() {
@@ -98,6 +99,7 @@
         power.decreaseEnergy()
         document.getElementById("power").innerHTML = "Power: " + power.getEnergy() + "%"
     }
+
 </script>
 </body>
 </html>
