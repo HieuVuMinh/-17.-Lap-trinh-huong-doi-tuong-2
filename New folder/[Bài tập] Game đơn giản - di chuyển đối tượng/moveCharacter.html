@@ -97,7 +97,7 @@
             this.cY = cY;
             this.cW = cW;
             this.cH = cH;
-            this.speed = 10;
+            this.speed = 20;
         }
 
         drawCharacter(src) {
@@ -129,14 +129,15 @@
     Draw.draw();
     let DrawCharacter = new Character(0, 0, 48, 64, 0, 0, 48, 64,)
     DrawCharacter.drawCharacter("418-Monster21.png");
-    // let DrawCharacterRight = new Character(0, 128, 48, 64, 0, 0, 48, 64)
-    // let DrawCharacterLeft = new Character(0, 64, 48, 64, 0, 0, 48, 64)
-    // let DrawCharacterUp = new Character(0, 192, 48, 64, 0, 0, 48, 64)
-    // let DrawCharacterDown = new Character(0, 0, 48, 64, 0, 0, 48, 64)
 
     // Di chuyển
     // Phải
     function moveRight() {
+        DrawCharacter.sX = 0;
+        DrawCharacter.sY = 128;
+        DrawCharacter.sW = 48;
+        DrawCharacter.sH = 64;
+
         DrawCharacter.moveRight();
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         Draw.draw();
@@ -145,6 +146,11 @@
 
     // Trái
     function moveLeft() {
+        DrawCharacter.sX = 0;
+        DrawCharacter.sY = 64;
+        DrawCharacter.sW = 48;
+        DrawCharacter.sH = 64;
+
         DrawCharacter.moveLeft();
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         Draw.draw();
@@ -153,6 +159,11 @@
 
     // Lên
     function moveUp() {
+        DrawCharacter.sX = 0;
+        DrawCharacter.sY = 192;
+        DrawCharacter.sW = 48;
+        DrawCharacter.sH = 64;
+
         DrawCharacter.moveUp();
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         Draw.draw();
@@ -161,6 +172,11 @@
 
     // Xuống
     function moveDown() {
+        DrawCharacter.sX = 0;
+        DrawCharacter.sY = 0;
+        DrawCharacter.sW = 48;
+        DrawCharacter.sH = 64;
+
         DrawCharacter.moveDown();
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         Draw.draw();

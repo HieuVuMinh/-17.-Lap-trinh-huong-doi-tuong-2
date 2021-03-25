@@ -6,16 +6,13 @@
 </head>
 <body>
 <script>
+    // Lớp Táo
     class Apple{
-        name;
         weight;
-        constructor(name, weight) {
+        constructor(weight) {
             this.weight = weight;
-            this.name = name
         }
-        appleName(){
-            return this.name;
-        }
+
         decrease(){
             if (this.weight > 0){
                 this.weigh--
@@ -31,44 +28,52 @@
         }
     }
 
+    // Lớp người
     class Human{
         name;
         weight;
         gender;
-        constructor(name, weight, gender) {
-            this.name;
-            this.weight;
-            this.gender;
+        constructor(name, weight, gender){
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
         }
         // Tên
-        humanName(){
+        getHumanName(){
             return this.name;
         }
 
         // Giới tính
+        getMale(){
+            this.gender = true;
+        }
+        getFeMale(){
+            this.gender = false;
+        }
         isMale(){
-            if (this.gender == male){
+            if (this.gender){
                 return true
-            } else if(this.gender == female){
+            } else{
                 return false
             }
         }
 
         // Cân nặng
-        weight(){
+        getHumanWeight(){
             return this.weight;
         }
 
         //set giới tính
         setGender(maleorfemale){
             this.gender = maleorfemale;
-            alert("Gender already change");
+            alert("Gender already change to " + maleorfemale);
         }
 
         // Chào
-        sayHello(){
+        getSayHello(){
             alert("Hello")
         }
+
         // Ăn táo
         eatApple(apple){
             if (apple.weight > 0){
@@ -81,10 +86,34 @@
             var isEmpty = apple.isEmpty()
             return isEmpty;
         }
-
-
-
     }
+    let TheApple = new Apple(10)
+    let TheAdam = new Human("Adam", 65, "male")
+    let TheEva = new Human("Eva", 50, "female" )
+
+    // Lấy khối lượng táo, Adam, Eva
+    // alert("Khối lượng quả táo: " + TheApple.weight)
+    // alert(TheAdam.getHumanWeight())
+    // alert(TheEva.getHumanWeight())
+    // alert(TheAdam.getSayHello())
+
+    // set gender
+    function setGender() {
+        let set = prompt("nhập giới tính");
+        TheAdam.setGender(set);
+        alert(TheAdam.getMale())
+    }
+
+    // Người ăn táo
+    function HumanEat(){
+        alert("Khối lượng quả táo trước khi bị ăn: " + TheApple.weight)
+        alert("Khối lượng Adam trước khi ăn: " + TheAdam.weight)
+        TheAdam.eatApple(TheApple);
+        alert("Khối lượng quả táo sau khi bị ăn: " + TheApple.weight)
+        alert("Khối lượng Adam sau khi ăn táo: " + TheAdam.weight)
+    }
+    HumanEat();
+
 </script>
 </body>
 </html>
